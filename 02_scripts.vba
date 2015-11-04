@@ -1,21 +1,36 @@
-Sub pldm_bsent_columns()
-'----------------------------------------------------------------------------------------------------------------------------
-'Обновление листа "Рабочий лист"
-'----------------------------------------------------------------------------------------------------------------------------
-Set CallerBook = ThisWorkbook
-Set DGBook = Workbooks("Интерфейс.xlsm")
-'----------------------------------------------------------------------------------------------------------------------------
-    DGBook.Worksheets("Рабочий лист").Select
-    Columns("A:G").Select
-    Selection.Clear
-    DGBook.Worksheets("Отсутствующие столбцы").Select
-    Columns("A:G").Select
-    Selection.Copy
-    DGBook.Worksheets("Рабочий лист").Select
-    Columns("A:G").Select
-    ActiveSheet.Paste
+Sub Clear_gen()
+'
+' Clear_gen Макрос
+'
+    Columns("G:G").Select
+    Selection.ClearContents
     Range("A2").Select
-'----------------------------------------------------------------------------------------------------------------------------
-    Application.EnableCancelKey = xlInterrupt
-'----------------------------------------------------------------------------------------------------------------------------
+    
+End Sub
+Sub cleare_gen_wiki()
+'
+' cleare_gen_wiki Макрос
+'
+    Columns("G:G").Select
+    Selection.ClearContents
+    Range("A2").Select
+End Sub
+
+Sub cleare_search_column()
+'
+' cleare_gen_wiki Макрос
+'
+    Columns("G:I").Select
+    Selection.ClearContents
+    Range("A2").Select
+End Sub
+
+
+Sub cleare_del_lnk()
+'
+' cleare_
+'
+    Columns("E:I").Select
+    Selection.ClearContents
+    Range("A2").Select
 End Sub
